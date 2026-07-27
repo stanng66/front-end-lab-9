@@ -9,15 +9,16 @@ import { useEffect, useState } from "react";
 
 export default function Lab9() {
   const [currencies, setCurrencies] = useState([]);
+  const [errors, setErrors] = useState("");
 
   useEffect(() => {
     fetch("https://6a67ada2157beab892d3aba0.mockapi.io/Demo")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setCurrencies(data);
+      .then(res => {
+        if (!res.ok) throw new Error("Failed to retrieve");
+        return res.json();
       })
-      .catch((err) => console.error("Fetch error:", err));
+      .then(data => setCurrencies(data))
+      .catch(err => setErrors(err.message))
   }, []);
 
   return (
@@ -26,9 +27,13 @@ export default function Lab9() {
       <h2>Stanley Nguyen</h2>
       <h3>Lab 9</h3>
 
+      <p style={{ color: "red" }}>{errors}</p>
+
       {currencies.map((item) => (
-        <div key={item.id} style={{ marginBottom: "10px" }}>
-          <strong>{item.Code}</strong> — {item.currency}
+        <div key={item.id}>
+          <p><strong>Currency Code:</strong> {item.code}</p>
+          <p><strong>Currency Name:</strong> {item.currency}</p>
+          <hr />
         </div>
       ))}
     </div>
