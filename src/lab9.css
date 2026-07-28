@@ -103,32 +103,31 @@ August 4, 2026
 
 .currency-container {
     width: 100%;
-    max-width: 1200px; 
-    
+    max-width: 1200px;  
 }
 
 .currency-table {
     width: 70%;
     margin: 20px auto;
-  border-collapse: collapse;
-  background: var(--clr-bg-white);
-  box-shadow: var(--shadow-md);
-  border-radius: var(--radius-md);
-  overflow: hidden;
+    border-collapse: collapse;
+    background: var(--clr-bg-white);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-md);
+    overflow: hidden;
 }
 
 .currency-table th {
-  background: var(--clr-primary);
-  color: white;
-  padding: 12px;
-  text-align: center;
+    background: var(--clr-primary);
+    color: white;
+    padding: 12px;
+    text-align: center;
 }
 
 .currency-table td {
-  padding: 12px;
-  border-bottom: 1px solid var(--clr-border);
+    padding: 12px;
+    border-bottom: 1px solid var(--clr-border);
 }
 
 .currency-table tr:nth-child(even) {
-  background: var(--clr-bg-light);
+    background: var(--clr-bg-light);
 }

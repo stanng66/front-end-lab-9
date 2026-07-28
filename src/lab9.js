@@ -6,12 +6,13 @@
 // August 4, 2026
 // ====================
 import "./lab9.css"
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";   // Use Effect will only allow you get the data once when the component will be mounted
 
 export default function Lab9() {
   const [currencies, setCurrencies] = useState([]);
   const [errors, setErrors] = useState("");
 
+  // Using fetch api and useEffect show the currency code, currecy name on your browser
   useEffect(() => {
     fetch("https://6a67ada2157beab892d3aba0.mockapi.io/Demo")
       .then(res => {
@@ -33,14 +34,6 @@ export default function Lab9() {
       <div className="currency-container">
         <p style={{ color: "red" }}>{errors}</p>
 
-        {/* {currencies.map((item) => (
-          <div className="currency-info" key={item.id}>
-            <p><strong>Currency Code:</strong> {item.code}</p>
-            <p><strong>Currency Name:</strong> {item.currency}</p>
-            <hr />
-          </div> 
-        ))} */}
-
         <table className="currency-table">
           <thead>
             <tr>
@@ -50,6 +43,7 @@ export default function Lab9() {
           </thead>
 
           <tbody>
+            {/* Use of map is must. */}
             {currencies.map((item) => (
               <tr key={item.id}>
                 <td>{item.code}</td>
