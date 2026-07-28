@@ -1,0 +1,134 @@
+/* ====================
+Lab 9
+Stanley Nguyen
+Humber College
+CPAN-144-RNA
+Ronak sheth
+August 4, 2026
+==================== */
+:root { /* Created for consitency and for easier adjustments when needed */
+    /* Colour Palette */
+    --clr-primary: #d81b60;   /* Deep Pink */ /* original pick - French Mauve #DE83CB */
+    --clr-secondary: #9e063d; /* Pink Lavender - #D7B4DC */
+    --clr-accent: #FA86B2;    /* Light Pink */
+    --clr-bg-light: #ECE3DE;  /* Isabelline */
+    --clr-bg-main: #B0D3E6;   /* Columbia Blue */
+
+    /* Text Colours */
+    --clr-text-main: #333333;
+    --clr-text-soft: #3a2f3a; /* slightly purple tone */
+    --clr-text-white: #ffffff;
+    --clr-text-muted: #6f5f6f;
+
+    /* Font Sizes */
+    --fs-xsm: 0.75rem;
+    --fs-sm: 0.9rem;
+    --fs-base: 1rem;
+    --fs-md: 1.2rem;
+    --fs-lg: 1.8rem;
+    --fs-xl: 2.5rem;
+
+    /* Font Weights */
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    /* UI Colours */
+    --clr-border: #dddddd;
+    --clr-input-border: #cccccc;
+    --clr-bg-white: #FAFAFA;
+
+    /* Dark Mode */
+    --clr-dark-bg: #1a1a1a;
+    --clr-dark-surface: #2a2a2a;
+    --clr-dark-header: #222222;
+    --clr-dark-border: #444444;
+
+    /* Shadows */
+    --shadow-xs: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 20px rgba(0,0,0,0.2);
+
+    /* Border Radius */
+    --radius-sm: 5px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+    --radius-xl: 20px;
+
+    /* Spacing */
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 20px;
+    --space-lg: 30px;
+    --space-xl: 60px;
+
+    /* Transitions */
+    --transition: all 0.3s ease;
+
+    /* Border */
+    --clr-border: #dddddd
+}
+
+.header {
+     background: var(--clr-bg-main);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xs);
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.header h1 {
+    font-size: var(--fs-xl);
+    color: var(--clr-text-main);
+}
+
+.header h2 {
+    font-size: var(--fs-lg);
+    color: var(--clr-primary);
+}
+
+.header h3 {
+    font-size: var(--fs-md);
+    color: var(--clr-secondary);
+}
+
+.currency-info {
+    background: var(--clr-bg-white);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-sm);
+    border: 1px solid var(--clr-border);
+}
+
+.currency-container {
+    width: 100%;
+    max-width: 1200px; 
+    
+}
+
+.currency-table {
+    width: 70%;
+    margin: 20px auto;
+  border-collapse: collapse;
+  background: var(--clr-bg-white);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.currency-table th {
+  background: var(--clr-primary);
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+.currency-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.currency-table tr:nth-child(even) {
+  background: var(--clr-bg-light);
+}
